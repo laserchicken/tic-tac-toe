@@ -1,24 +1,23 @@
-# README
+## App local setup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Build and start:
+```
+docker-compose up
+```
 
-Things you may want to cover:
+Setup db:
+```
+docker-compose run web rails db:setup
+```
 
-* Ruby version
+Run webpacker:install (do not overwrite config):
+```
+docker-compose run web rails webpacker:install
+```
 
-* System dependencies
+Visit http://localhost:3000
 
-* Configuration
+## TODOs
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Add tests
+2. Implement sign-up
