@@ -165,12 +165,16 @@ const Board = ({
           .fill()
           .map((_, i) => {
             return (
-              <Row className="m-0" style={{ flexGrow: 1, flexWrap: "nowrap" }}>
+              <Row
+                key={i}
+                className="m-0"
+                style={{ flexGrow: 1, flexWrap: "nowrap" }}
+              >
                 {Array(columnsCount)
                   .fill()
                   .map((_, j) => {
                     return (
-                      <Col className="p-0">
+                      <Col key={j} className="p-0">
                         <Square
                           value={gameState.board[i][j]}
                           i={i}
